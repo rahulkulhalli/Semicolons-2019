@@ -2,7 +2,7 @@
 A repository for documenting all the code for Semicolons 2019.
 
 ## Topic
-Explainable AI in the Medical Domain
+<Topic>
 
 Contributors:
  - Rahul Kulhalli

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+      <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"> -->
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <meta charset="utf-8">
+    <title>Amazon Review Explainer</title>
+  </head>
+  <body>
+    {% extends "template.html" %}
+    {% block content %}
+	<!--
+	model_id = {{model_id}}
+	page_title = {{page_title}}
+	class_1_text = {{class_1_text}}
+	class_1_label = {{class_1_label}}
+	class_2_text = {{class_2_text}}
+	class_2_label = {{class_2_label}}
+	word_image = {{word_image}}
+	full_text_html = {{full_text_html}}
+    show_explanation = {{show_explanation}}
+	-->
+
+    <h1 class="ml-5"> Home : Text Explainer : {{page_title}} </h1>
+	<br><br>
+	<!-- <div class="card-body">
+		<h4 class="card-title">John Doe</h4>
+		<p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+		<a href="#" class="btn btn-primary">See Profile</a>
+	</div> -->
+	<div class="row ml-5">
+		<div class="card" style="width:33%">
+			<div class="card-body">
+				<p class="card-text">{{class_1_text}}</p>
+				<br>
+				<p class="card-title text-danger" style="position:absolute;bottom:0;" >{{class_1_label}}</p>
+			</div>
+		</div>
+		<div class="card" style="width:33%">
+			<div class="card-body">
+				<p class="card-text">{{class_2_text}}</p>
+				<br>
+				<p class="card-title text-danger" style="position:absolute; bottom:0; ">{{class_2_label}}</p>
+			</div>
+		</div>
+	</div>
+	<div class="row ml-5">	
+		<form action="{{ url_for('text_model', model_id=model_id) }}" method="post">
+			<textarea rows="4" cols="103%" name="sample_text"></textarea>
+			<br>
+			<center>
+				<input type="submit" class = "btn btn-primary pl-3 pr-3" style="width:158px" onclick= "foo()"  id="audit" value="Audit">
+			</center>
+		</form>
+	</div>
+	<div class="row"  >
+		<div class="col-sm-6" >
+			<img src="/static/output/word_level_explanation.png" width="100%" height="100%" class="mt-1" alt="Word level explanation">
+		</div>
+		<div class="col-sm-6" >
+			<iframe src="/static/output/full_explanation.html" width="100%" height="79%" class="mt-5">
+				<p>Your browser does not support iframes.</p>
+			</iframe>
+		</div>
+	</div>
+    {% endblock %}
+  </body>
+</html>

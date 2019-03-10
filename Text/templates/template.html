@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Parent Template</title>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css ">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/template.css') }}">
+
+  </head>
+  <body>
+    <header  class="container-fluid m-0;" style="padding-left:0;padding-right:0">
+      <div>
+        <h1 class="logo" style="margin-bottom: 0;background-color: #007bff;">Explainable AI in HealthCare</h1>
+        <strong>
+
+              <!-- <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+                   <div class="navbar-header">
+                      <a class="navbar-brand" href="#">WebSiteName</a>
+                    </div> -->
+                    <!-- <ul class="navbar-nav">
+                      <li class="active nav-item"><a href="{{ url_for('home') }}">Home</a></li>
+                      <li><a href="{{ url_for('text') }}">Text</a></li>
+                      
+                    </ul>
+                </nav> --> 
+
+
+
+                <nav class="navbar navbar-expand-sm navbar-light">
+                    <!-- Brand/logo -->
+                    
+                    <!-- Links -->
+                    <ul class="navbar-nav">
+                      <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('home') }}">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('text') }}">Text</a>
+                      </li>
+
+                      <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('image') }}">Images</a>
+                      </li>
+                      
+                     
+                    </ul>
+                  </nav>
+
+
+
+<!-- 
+           <li><a href="{{ url_for('home') }}">Home</a></li> 
+            <li><a href="{{ url_for('text') }}">Text</a></li> -->
+      </strong>
+      </div>
+    </header>
+
+    {% block content %}
+    {% endblock %}
+
+  </body>
+</html>

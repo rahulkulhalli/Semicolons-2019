@@ -1,0 +1,133 @@
+<head>
+    <style>
+            fieldset	{
+		border: 1px solid #ddd !important;
+		margin: 0;
+		padding: 10px;       
+		position: relative;
+		border-radius:4px;
+		background-color:#f5f5f5;
+        padding-left:10px!important;
+        justify-content: center;
+        margin:50px;
+    }	
+    /* input[type='file']{
+        display: none;
+    } */
+	
+		legend
+		{
+			font-size:14px;
+			font-weight:bold;
+			margin-bottom: 0px; 
+			width: 35%; 
+			border: 1px solid #ddd;
+			border-radius: 4px; 
+			padding: 5px 5px 5px 10px; 
+			background-color: #ffffff;
+		}
+        </style>
+        
+<!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js  "></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script> -->
+</head>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container">
+<br/>
+<div class="panel panel-default">
+<!-- 
+			<div class="panel-heading">Dataset</div> -->
+			<div class="panel-body">
+            
+            <fieldset class="col-md-6">    	
+                    <form action = "{{url_for('program')}}" method = "post" enctype="multipart/form-data" class="form-horizontal">
+                        <div class="form-group">
+                            <label for="dataset"><h3>Upload Dataset</h3></label>
+                            <input type="file" name="data_csv" value="enter target"/><br><br>
+                        </div><hr>
+                        <div class="form-group">
+                            <label for="dataset"><h3>Enter Target column name:</h3></label>
+                            <input type="text" name="target" placeholder="enter target"/><br><br>
+                        </div><hr>
+                        <div class="form-group">
+                            <label for="dataset"><h3>Upload Model</h3></label>
+                            <input type = "file" name = "model" value="upload_model" accept=".sav" /><br><br>
+                        </div><hr>
+                        <div class="form-group">
+                            <label for="dataset"><h3>Kernel Type</h3></label>
+                            <select name="text">
+                                    <option value="k">Kernel</option>
+                                    <option value="t">Tree</option>
+                                    <option value="d">DeepLearning</option>
+                            </select><hr>
+                            <!-- <input type = "text" name = "text" value="enter_kernel_type" /><br><br> -->
+                        </div>
+                        <div class="row">
+                        <div class="form-group col-md-2">
+                            <label for="dataset"><h3>Upload Sample Data</h3></label>    
+                            <input type = "file" name = "data_csv_row" placeholder="upload_dataset_row" /><br><br>
+                        </div>
+                    </div><hr><br>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                
+                         <!-- <p><input type = "file" name = "data_csv" value="upload_dataset" accept=".csv" /></p>
+                         <p><input type="text" name="target" value="enter target"/></p>
+                         <p><input type = "file" name = "model" value="upload_model" accept=".sav" /></p>
+                         <p><input type = "text" name = "text" value="enter_kernel_type" /></p>
+                         <p><input type = "file" name = "data_csv_row" value="upload_dataset_row" /></p>
+                         <p><input type = "submit" value = "submit" /></p> -->
+                      </form>
+				</fieldset>				
+				
+				<div class="clearfix"></div>
+            </div>
+                
+</div>
+</div>
+{% block content %}
+      {% endblock %}
+      <script>
+
+            var modal = document.getElementById('myModal');
+            
+            var img1 = document.getElementById('img1');
+            var img2 = document.getElementById('img2');
+            var img3 = document.getElementById('img3');
+            var img4 = document.getElementById('img4');
+            var img5 = document.getElementById('img5');
+
+
+            var modalImg = document.getElementById("img01");
+           
+
+            img1.onclick = function(){
+              modal.style.display = "block";
+              modalImg.src = this.src;
+            }
+            img2.onclick = function(){
+              modal.style.display = "block";
+              modalImg.src = this.src;
+            }
+            img3.onclick = function(){
+              modal.style.display = "block";
+              modalImg.src = this.src;
+            }
+            img4.onclick = function(){
+              modal.style.display = "block";
+              modalImg.src = this.src;
+            }
+            img5.onclick = function(){
+              modal.style.display = "block";
+              modalImg.src = this.src;
+            }
+            
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+            
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() { 
+              modal.style.display = "none";
+            }
+            </script>

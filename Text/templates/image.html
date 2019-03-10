@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <meta charset="utf-8">
+    <title>Amazon Review Explainer</title>
+    <link rel="stylesheet" href="images.css">
+    <script src="images.js"></script>
+</head>
+
+<body class="container-fluid">
+    {% extends "template.html" %}
+    {% block content %}
+    <!--
+	model_id = {{model_id}}
+	page_title = {{page_title}}
+	class_1_text = {{class_1_text}}
+	class_1_label = {{class_1_label}}
+	class_2_text = {{class_2_text}}
+	class_2_label = {{class_2_label}}
+	-->
+
+    <!-- <h1 class="ml-5"> Home : Image Explainer : Pneumonia</h1>
+		<br><br> -->
+    <!-- <div class="card-body">
+				<h4 class="card-title">John Doe</h4>
+				<p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+				<a href="#" class="btn btn-primary">See Profile</a>
+			</div> -->
+
+
+    <!-- 
+<div class="row ml-5">
+	<div class="card" style="width:33%">
+	<div class="card-body">
+		<p class="card-text">This is my 3rd iPhone after iPhone 4S and iPhone 6S Plus. Being an utter working middle class guy, I don't switch my iPhones very often (my android phones barely lasted me 9 months though). I do consider them extremely expensive, and I wouldn't go for one, unless I felt it was worth the money I was paying for it.</p>
+	<br>	<p class="card-title text-danger">Positive Class</p>
+	</div> 
+</div>
+
+	<div class="card" style="width:33%">
+<div class="card-body">
+		<p class="card-text">I ordered new iPhone X grey on Amazon sale. Phone looks absolutely fine but battery is very weak though it has fast charging option my phone requires 4-5 hours to get charged completely n also my phone is very slow.. feels like I have got a refurbished phone. Guys plz never go for online when u r purchasing costly phones. I have done a mistake u think before doing.</p>
+		<p class="card-title text-danger">Negative Class</p>
+	</div>
+	</div>
+</div> -->
+    <!-- <div class="row ml-5"> -->
+
+    <!-- <form action="{{ url_for('text_model', model_id=model_id) }}" method="post">
+		<textarea rows="4" cols="113%" name="sample_text"></textarea>
+	<br>	<center><input type="submit" class = "btn btn-success pl-3 pr-3"  value="Audit"> </center>
+	</form>
+</div>
+<br> -->
+    <!-- <div class="row">
+<div class="col-sm-6">
+	<img src="/static/images/word_level_explanation.png" width="100%" height="100%" class="mt-1">
+</div>
+<div class="col-sm-6">
+<iframe src="/static/images/full_text_explanation.html" width="100%" height="79%" class="mt-5"  >
+  <p>Your browser does not support iframes.</p>
+</iframe>
+</div>
+</div> -->
+    <!-- 
+<div class = "row">
+    <img src="https://www.mayoclinic.org/-/media/kcms/gbs/patient-consumer/images/2016/05/18/13/02/ww5r032t-8col-jpg.jpg" class="col-md-4" alt="Paris" width="304" height="236"> 
+    <img src="https://www.mayoclinic.org/-/media/kcms/gbs/patient-consumer/images/2016/05/18/13/02/ww5r032t-8col-jpg.jpg" class="col-md-4" alt="Paris" width="304" height="236"> 
+    <img src="https://www.mayoclinic.org/-/media/kcms/gbs/patient-consumer/images/2016/05/18/13/02/ww5r032t-8col-jpg.jpg" class="col-md-4" alt="Paris" width="304" height="236"> 
+  </div> -->
+
+    <div class="w3-container w3-padding-32" id="projects">
+        <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Pneumonia</h3>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="w3-col l3 m6 w3-margin-bottom">
+                        <div class="w3-display-container">
+
+                            <img src="./static/images/C1_thinF_IMG_20150604_104722_cell_66.png" alt="" style="width:100%"
+                                height="100%">
+                        </div>
+                    </div>
+                    <div class="w3-col l3 m6 w3-margin-bottom">
+                        <div class="w3-display-container">
+
+                            <img src="./static/images/C1_thinF_IMG_20150604_104942_cell_139.png" alt=""
+                                style="width:100%" height="100%" >
+                        </div>
+                    </div>
+                </div>
+                    <div class="row">
+                        <div class="w3-col l3 m6 w3-margin-bottom">
+                            <div class="w3-display-container">
+
+                                <img src="./static/images/C37BP2_thinF_IMG_20150620_131423a_cell_92.png" alt=""
+                                    style="width:100%" height="100%">
+                            </div>
+                        </div>
+                        <div class="w3-col l3 m6 w3-margin-bottom">
+                            <div class="w3-display-container">
+
+                                <img src="./static/images/C39P4thinF_original_IMG_20150622_105102_cell_83.png" alt=""
+                                    style="width:100%" height="100%">
+                            </div>
+                        </div>
+                    </div>
+                
+            </div>
+
+                <!-- <div class="w3-row-padding"> -->
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="w3-col l3 m6 w3-margin-bottom">
+                            <div class="w3-display-container ">
+                                <img src="./static/images/C33P1thinF_IMG_20150619_121229a_cell_179.png" alt=""
+                                    style="width:100%" height="100%">
+                            </div>
+                        </div>
+                        <div class="w3-col l3 m6 w3-margin-bottom">
+                            <div class="w3-display-container">
+
+                                <img src="./static/images/C1_thinF_IMG_20150604_104942_cell_269.png" alt=""
+                                    style="width:100%" height="100%">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+
+                        <div class="w3-col l3 m6 w3-margin-bottom">
+                            <div class="w3-display-container">
+
+                                <img src="./static/images/C38P3thinF_original_IMG_20150621_112116_cell_204.png" alt=""
+                                    style="width:100%" height="100%">
+                            </div>
+                        </div>
+                        <div class="w3-col l3 m6 w3-margin-bottom">
+                            <div class="w3-display-container">
+
+                                <img src="./static/images/C3thin_original_IMG_20150608_163002_cell_39.png" alt=""
+                                    style="width:100%" height="100%">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+</div>
+        </div>
+
+
+
+
+        {% endblock %}
+</body>
+
+</html>

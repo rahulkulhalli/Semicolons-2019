@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+      <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"> -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+      <meta charset="utf-8">
+    <title>Text Explainer</title>
+  </head>
+  <body>
+    {% extends "template.html" %}
+    {% block content %}
+    <div class="row m-2">
+        <div class="col-md-6 ">
+            <img src="https://www.opengroup.org/sites/default/files/Healthcare%20Library.jpg" height="350px" width="100%">
+        </div>
+        <div class="col-md-6">
+           
+           
+           <!-- *********************** Sample text here ************************** -->
+        </div>
+    </div>
+    <br><br>
+    <div class="col-md-11">
+    <div class="list-group">
+    <ul>
+        <div class="row mr-0">
+            <a class="list-group-item list-group-item-action col-sm-6" href="{{ url_for('text_model', model_id=1) }}">Amazon Reviews LSTM</a>
+            <a class="list-group-item list-group-item-action col-sm-6 mr-6" href="{{ url_for('text_model', model_id=2) }}">Amazon Reviews CNN</a>
+        </div>
+        <br><br>
+        <div class="row mr-0">
+            <a class="list-group-item list-group-item-action col-sm-6" href="{{ url_for('text_model', model_id=3) }}">Drug Reviews Linear Regression</a>
+            <a class="list-group-item list-group-item-action col-sm-6 " href="{{ url_for('text_model', model_id=4) }}">Drug Reviews Random Forest</a>
+        </div>
+	</ul>
+    {% endblock %}
+  </div>
+</div>
+  
+  </body>
+
+  
+  
+</html>

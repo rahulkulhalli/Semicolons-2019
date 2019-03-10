@@ -1,0 +1,55 @@
+<html>
+   <head>
+<style>
+
+.zoom {
+  padding: 50px;
+  transition: transform .2s;
+}
+
+.zoom:hover {
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.5); 
+}</style>
+   </head>
+   <body>
+
+         {% extends "index.html" %}
+         {% block content %}
+         <div class="zoom">
+         <iframe src="../output/individual_shap.html" height="210" width="100%" scrolling="no" class="iframe" frameborder="0" >
+            <p>Your browser does not support iframes.</p>
+         </iframe>
+         </div>
+         <div style="display: flex; flex-direction:column">
+               <div>
+                     <div class="zoom" style="margin-bottom: 50px"> 
+                        <h5 style="width: 700;padding-left:400px" align="center">Permutation Importance</h5>
+                           <iframe src="../output/permutation_importance.html" height="200px" width="700px" scrolling="no" class="iframe" frameborder="0" style="margin-left: 400px">
+                              <p>Your browser does not support iframes.</p>
+                            </iframe>
+                     </div>
+                     <img id="img5" class ="imgc"  src="../output/summary_plot.jpg" height="500px" width="500px" style="margin-left:400px; margin-top:50px">
+            
+               </div>            
+               <div style="margin-left: 100px">
+                     <img id="img1" class ="imgc" src="../output/dep_plot1.jpg" height="500px" width="500px" style="margin: 50px">
+                     <img id="img2" class ="imgc"  src="../output/dep_plot2.jpg" height="500px" width="500px" style="margin: 50px">
+               
+               </div>
+               <div style="margin-left: 100px">
+                     <img id="img3" class ="imgc"  src="../output/dep_plot_2d.jpg" height="500px" width="500px" style="margin: 50px">
+                     <img id="img4" class ="imgc" src="../output/shap_dependence.jpg" height="500px" width="500px" style="margin: 50px">
+               </div>
+               <div id="myModal" class="modal">
+                        <span class="close">&times;</span>
+                        <img class="modal-conten" id="img01" text-align="center">
+                        
+               </div>
+
+         </div>
+         {% endblock %}
+
+   </body>
+</html>

@@ -1,0 +1,167 @@
+<html>
+        <style>
+                .modal {
+               display: none; /* Hidden by default */
+               position: fixed; /* Stay in place */
+               z-index: 1; /* Sit on top */
+               padding-top: 100px; /* Location of the box */
+               left: 0;
+               top: 0;
+               width: 100%; /* Full width */
+               height: 100%; /* Full height */
+               overflow: auto; /* Enable scroll if needed */
+               background-color: rgb(0,0,0); /* Fallback color */
+               background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+             }
+             
+             /* Modal Content (image) */
+             .modal-content {
+               margin: auto;
+               display: block;
+               width: 80%;
+               max-width: 700px;
+             }
+             
+             /* Caption of Modal Image */
+             
+             
+             /* Add Animation */
+             .modal-content, #caption {  
+               -webkit-animation-name: zoom;
+               -webkit-animation-duration: 0.6s;
+               animation-name: zoom;
+               animation-duration: 0.6s;
+             }
+             
+             @-webkit-keyframes zoom {
+               from {-webkit-transform:scale(0)} 
+               to {-webkit-transform:scale(1)}
+             }
+             
+             @keyframes zoom {
+               from {transform:scale(0)} 
+               to {transform:scale(1)}
+             }
+             
+             /* The Close Button */
+             .close {
+               position: absolute;
+               top: 15px;
+               right: 35px;
+               color: #f1f1f1;
+               font-size: 40px;
+               font-weight: bold;
+               transition: 0.3s;
+             }
+             
+             .close:hover,
+             .close:focus {
+               color: #bbb;
+               text-decoration: none;
+               cursor: pointer;
+             }
+             
+             /* 100% Image Width on Smaller Screens */
+             @media only screen and (max-width: 700px){
+               .modal-content {
+                 width: 100%;
+               }
+             }
+             </style>
+                </style>
+    <head>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    </head>
+
+   <body>
+       <div class="container-fluid">
+      <form action = "{{url_for('program')}}" method = "post" enctype="multipart/form-data" class="text-center form-horizontal">
+        
+        <fieldset>
+
+        <div class="form-group">
+            <label for="dataset">Upload Dataset</label><br>
+            <input type="file" name="data_csv" value="enter target"/><br><br>
+        </div>
+        <div class="form-group">
+            <label for="dataset">Enter Target column name:</label><br>
+            <input type="text" name="target" value="enter target"/><br><br>
+        </div>
+        <div class="form-group">
+            <label for="dataset">Upload Model</label><br>
+            <input type = "file" name = "model" value="upload_model" accept=".sav" /><br><br>
+        </div>
+        <div class="form-group">
+            <label for="dataset">Kernel Type</label><br>
+            <select name="text">
+                    <option value="k">Kernel</option>
+                    <option value="t">Tree</option>
+                    <option value="d">DeepLearning</option>
+            </select>
+            <!-- <input type = "text" name = "text" value="enter_kernel_type" /><br><br> -->
+        </div>
+        <div class="row">
+        <div class="form-group col-md-2">
+            <label for="dataset">Upload Sample Data</label><br>
+            <input type = "file" name = "data_csv_row" value="upload_dataset_row" /><br><br>
+        </div>
+    </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+
+         <!-- <p><input type = "file" name = "data_csv" value="upload_dataset" accept=".csv" /></p>
+         <p><input type="text" name="target" value="enter target"/></p>
+         <p><input type = "file" name = "model" value="upload_model" accept=".sav" /></p>
+         <p><input type = "text" name = "text" value="enter_kernel_type" /></p>
+         <p><input type = "file" name = "data_csv_row" value="upload_dataset_row" /></p>
+         <p><input type = "submit" value = "submit" /></p> -->
+        </fieldset>
+      </form>
+    </div>
+      {% block content %}
+      {% endblock %}
+      <script>
+
+            var modal = document.getElementById('myModal');
+            
+            var img1 = document.getElementById('img1');
+            var img2 = document.getElementById('img2');
+            var img3 = document.getElementById('img3');
+            var img4 = document.getElementById('img4');
+            var img5 = document.getElementById('img5');
+
+
+            var modalImg = document.getElementById("img01");
+           
+
+            img1.onclick = function(){
+              modal.style.display = "block";
+              modalImg.src = this.src;
+            }
+            img2.onclick = function(){
+              modal.style.display = "block";
+              modalImg.src = this.src;
+            }
+            img3.onclick = function(){
+              modal.style.display = "block";
+              modalImg.src = this.src;
+            }
+            img4.onclick = function(){
+              modal.style.display = "block";
+              modalImg.src = this.src;
+            }
+            img5.onclick = function(){
+              modal.style.display = "block";
+              modalImg.src = this.src;
+            }
+            
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+            
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() { 
+              modal.style.display = "none";
+            }
+            </script>
+   </body>
+</html>

@@ -2,7 +2,7 @@
 A repository for documenting all the code for Semicolons 2019.
 
 ## Topic
-<Topic>
+Explainability in AI
 
 Contributors:
  - Rahul Kulhalli

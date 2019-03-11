@@ -5,7 +5,7 @@ A repository for documenting all the code for Semicolons 2019.
 Explainability in AI
 
 ## Contributors:
- - Rahul Kulhalli
+ - <a href="https://github.com/rahulkulhalli">Rahul Kulhalli (Self)</a>
  - <a href="https://github.com/savadikarc">Chinmay Savadikar</a>
  - <a href="https://github.com/PranavArora018">Pranav Arora</a>
  - <a href="https://github.com/kunalkr">Kunal Kumar</a>

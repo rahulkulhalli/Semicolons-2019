@@ -4,7 +4,7 @@ A repository for documenting all the code for Semicolons 2019.
 ## Topic
 Explainability in AI
 
-Contributors:
+## Contributors:
  - Rahul Kulhalli
  - Chinmay Savadikar
  - Pranav Arora
